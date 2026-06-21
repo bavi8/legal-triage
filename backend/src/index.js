@@ -15,10 +15,11 @@ const app = express();
 // Tells the backend which frontend URLs are allowed to talk to it
 app.use(cors({
   origin: [
-    "http://localhost:5173",      // Vite default port
-    "http://localhost:5174",      // Vite alternate port
-    "http://192.168.1.8:5173",   // Your local network (from error screenshot)
-    "http://192.168.1.8:5174",   // Your local network alternate
+    "http://localhost:5173",         // Vite default port
+    "http://localhost:5174",         // Vite alternate port
+    "http://192.168.1.8:5173",       // Your local network
+    "http://192.168.1.8:5174",       // Your local network alternate
+    "https://legal-triage-eta.vercel.app", // Live Vercel frontend
   ],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
